@@ -7,6 +7,8 @@ import icon from '../assets/icons/pure-icon.png';
 import KeysButtons from '../components/KeysButtons';
 import CapoButtons from '../components/CapoButtons';
 import CapoKey from '../components/CapoKeys';
+import ChordsModal from '../modals/ChordsModal';
+import ViewChordsButton from '../components/ViewChordsButton';
 import { STATUS_BAR_HEIGHT, SCREEN_WIDTH } from '../constants';
 
 const cacheImages = images => images.map(image => {
@@ -44,9 +46,10 @@ class MainScreen extends Component {
     }
 
     render() {
-        const { containerStyle, dividerStyle } = styles;
+        const { containerStyle, dividerStyle, buttonContainerStyle } = styles;
         return (
             <View style={{ flex: 1, backgroundColor: '#ddd' }}>        
+                <ChordsModal />
                 <View style={containerStyle}>
                     <KeysButtons />
                     <Divider style={dividerStyle} />
@@ -54,6 +57,7 @@ class MainScreen extends Component {
                     <Divider style={dividerStyle} />
                     <CapoKey />
                 </View>
+                <ViewChordsButton style={buttonContainerStyle} />
             </View>
         );        
     }
@@ -74,6 +78,12 @@ const styles = {
     dividerStyle: {
       width: SCREEN_WIDTH * 0.9,
       backgroundColor: '#2196F3'
+    },
+    buttonContainerStyle: {
+        width: SCREEN_WIDTH,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 10
     }
   };
 
