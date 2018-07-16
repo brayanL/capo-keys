@@ -36,7 +36,7 @@ class MainScreen extends Component {
     }
 
     componentWillMount() {
-        this.loadAssetsAsync();
+        //this.loadAssetsAsync();
     }
 
     async loadAssetsAsync() {
