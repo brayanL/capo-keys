@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Modal } from 'react-native';
-import { Button, Text } from 'react-native-elements';
+import { Button, FormInput, FormLabel } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { SCREEN_WIDTH, SCREEN_HEIGHT } from '../constants';
 import { closeChordsModal } from '../actions';
@@ -23,7 +23,9 @@ class ChordsModal extends Component {
                         title="Close"
                         backgroundColor="#2196F3"
                         onPress={() => this.props.closeChordsModal()}
-                    />                                                                    
+                    /> 
+                    <FormLabel>Name</FormLabel>
+                    <FormInput />
                     </View>
                 </View>
             </View>

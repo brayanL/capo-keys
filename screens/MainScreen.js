@@ -59,7 +59,7 @@ class MainScreen extends Component {
                 </View>
                 <ViewChordsButton style={buttonContainerStyle} />
             </View>
-        );        
+        );
     }
 }
 

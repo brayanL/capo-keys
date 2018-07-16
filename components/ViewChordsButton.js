@@ -20,4 +20,4 @@ class ViewChordsButton extends Component {
     }
   }
   
-  export default connect(null, { openChordsModal })(ViewChordsButton);
+export default connect(null, { openChordsModal })(ViewChordsButton);
